@@ -37,4 +37,5 @@ WES reindex script
 ## GCC Overview and Mission
 
 Todd Gay
-
+Govt, Industry, and schools - colloboration 
+   GBI, Clubhouse, students, Augusta Univ, Augusta Tech, Parsons, DOD, Cafe,  
