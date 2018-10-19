@@ -39,3 +39,21 @@ WES reindex script
 Todd Gay
 Govt, Industry, and schools - colloboration 
    GBI, Clubhouse, students, Augusta Univ, Augusta Tech, Parsons, DOD, Cafe,  
+
+
+
+## PCAPS Ahoy! Commodity Malware Infections on Windows Hosts
+
+keep the anyalsts happy and sharp
+     Red Team or pentesting
+     Forsensics
+     Hunting / Active Defense
+Looking at Commodity Malware
+     Sanitizing pcap  - TraceWrangler
+     hex editor BLESS
+     Customizing Wireshark - Changing Your Column Display Brad Duncan Unit 42
+     
+Trickbot  2018-10-16-Trickbot.pcap  
+Emotet/Freedo 
+
+ 
