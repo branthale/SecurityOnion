@@ -1,0 +1,26 @@
+How to get JA3 into Security Onion
+
+
+
+JA3 on github
+
+https://github.com/salesforce/ja3
+
+https://github.com/salesforce/ja3/tree/master/bro
+
+
+
+JA3 - steps to install
+
+ 
+
+mkdir ja3 in /opt/bro/share/bro
+
+Clone https://github.com/salesforce/ja3/tree/master/bro into /opt/bro/share/bro/ja3
+
+               copy ja3 files there or do a git clone 
+
+
+mod /opt/bro/share/bro/site/local.bro       add   @load ja3
+
+add ja3 intel to /opt/bro/share/bro/intel/intel.dat
