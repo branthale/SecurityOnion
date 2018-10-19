@@ -56,4 +56,4 @@ Looking at Commodity Malware
 Trickbot  2018-10-16-Trickbot.pcap  
 Emotet/Freedo 
 
- 
+ [ ] Lunch
