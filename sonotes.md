@@ -2,8 +2,10 @@
 
 ## Enable password extraction
 /opt/bro/share/bro/site/local.bro
+
  redef HTTP::default_capture_password = T;
- redef FTP::default_capture_password = T;
+
+redef FTP::default_capture_password = T;
 
 ## Kill all the perl processes
 kill -9 `ps -ef | grep perl | grep -v grep | awk '{print $2}'`
