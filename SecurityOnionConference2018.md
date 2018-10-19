@@ -108,3 +108,7 @@ stack counting - 1st rule of threat hunting club
 
 Time series anaylsis 
 
+threathunting.net/hunting-platform
+
+jupyter
+
