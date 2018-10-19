@@ -56,4 +56,55 @@ Looking at Commodity Malware
 Trickbot  2018-10-16-Trickbot.pcap  
 Emotet/Freedo 
 
- [ ] Lunch
+ [] Lunch
+ 
+ ## Integrating Osquery into Security Onion
+ osquery  (facebook)
+     Treat system like a relational DB
+     cross platform
+     
+     osquery.io/schema
+     
+     github.com/bro/bro-osquery
+     
+     Wuzuh Integration
+     learnosquery.com
+     defensivedepth.com
+    
+## Getting the Most Out of Freq and Domain_Stats
+
+     Mark Baggett
+     
+     https://tinyurl.com/sec-onion-2018-markbaggett
+     
+     SEC573 auto infose with python
+     
+     /opt/metasploit-freamworkd$ grep -Ri "mark baggett"
+     
+     Look at whois creation date 
+     
+     github.com/markbaggett/domain_stats
+     
+## Intro to Data Analysis with Security Onion
+David Bianco
+
+@DavidJBianco
+
+jupiter - notebook
+
+import pandas as pd
+
+import numpy as np
+
+   Series
+   
+   Dataframe
+
+from huntlib.elastic import ElasticDF
+
+github.com/target/huntlib
+
+stack counting - 1st rule of threat hunting club
+
+Time series anaylsis 
+
