@@ -1,6 +1,6 @@
-##Notes from the Security Onion Conference 2018 Augusta GA
+# Notes from the Security Onion Conference 2018 Augusta GA
 
-#Save Time with Modern Search Techniques 
+## Save Time with Modern Search Techniques 
 
 Searching a billion logs a minute
 
@@ -8,7 +8,7 @@ bluesmote.com
 CERT INsider Threat tools
 
 markjx/search2018
-https://github.com/markjx/search2018
+https://github.com/markjx/search2018   [MarkJX (https://github.com/markjx/search2018)]
 Mark Jenmougin
 
 GNU Parallel
@@ -21,7 +21,7 @@ New commands
    squishycat     decompress all the things
    grepwide       simplified parrallel GREP    
 
-#Blue, Red, Purple, White : Which team are you?
+## Blue, Red, Purple, White : Which team are you?
 
 five students one trainer 
     Practice Incident Response
@@ -34,7 +34,7 @@ five students one trainer
 https://github.com/sm-biz/paloalto-elasticstack-viz/wiki
 WES reindex script
 
-#GCC Overview and Mission
+## GCC Overview and Mission
 
 Todd Gay
 
