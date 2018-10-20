@@ -162,6 +162,68 @@ remote registry
 
 ## Comparing apples to Apple          Track 1 3:15
 
+macOS three things :   Code Signing Entitlements Sandboxing 
+
+powershell             applescript, bash, python, ruby, perl, php, and powershell ?
+
+Mitre ATT&K framework 
+
+net.exe       dscl/dscachetutil
+misinfo32     system_profiler
+nmap.exe      stroke
+doskey        .bash_history
+dll hijacking  Dylib Hijacking   
+
+Mac  eggshell tool 
+
+look for osascript    in logs 
+
+mimikatz       Keychain access 
+security find-internet-password -gs 
+security dump-keychain -d login.keychaing > keychain.txt
+
+/Library/Preferences/login.keychain-db    keychain file
+psexec       applescript
+
+Persistence
+/Library/StartupItems
+LaunchDaemons
+LaunchAgents
+cron jobs/launchct
+
+
+    
+
 ## Objectively Measuring Hunt Value   Track 1 3:45
+
+Justin Kohler ICEBERG / Gigamon
+
+theford wall Patrick Perry
+
+Threat Hunting - no defined standad, retrospectivce detection, human directed, begins with a question, pivot 
+ 
+Problems
+Why
+how - hypothesis formation, example
+webinars
+
+How do we measure success?
+ metrics 
+ how do you record sucess 
+ 
+Basics 
+ Terms
+   Hunting Hypothesis  - Mitre ATT&Ck tactics and techniques (SpecterOPS)
+   Hunting Activity      Non-malicous,  Nothing, malicous
+   Hunting Outcome       Incident created, detection/analytic created, vuln identified, logging gap, insecure practice
+   
+   Ref  NIST CSF   
+   
+   
+Solution
+
+Confluence JIRA    logging gaps, dets created, active hunts,
+   
+github.com/pjbperry/Presentations
 
 Raffle 252732-741
