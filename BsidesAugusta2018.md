@@ -113,7 +113,7 @@ KSA
 Range ISMs
  Agents - do not pivot, do not adjust, go after one thing domain admin, don't read e-mail
  Tools that use agent aren't that real
- 4688 Detail tracking / don't teach them somehting that they can't do
+ 4688 Detail tracking / don't teach them something that they can't do
  
  
 
@@ -129,7 +129,13 @@ Alexa is andriod, side channel commands, over privledged, data capture/exfil, te
 
 
 
-## Movement After Initial Compromise  Track 3 2:!5
+## Movement After Initial Compromise  Track 3 2:15
+
+SleepZ3R0
+
+sixgen  ACO
+
+powerup   DLL hijacking 
 
 ## Comparing apples to Apple          Track 1 3:15
 
