@@ -116,10 +116,18 @@ Range ISMs
  4688 Detail tracking / don't teach them somehting that they can't do
  
  
- 
- 
 
 ## The Sound of Evil                  Track 2 1:30
+
+Siri waning 
+Alexa is winnning 
+Google dot 
+
+github.com/worldviel/dejavu
+
+Alexa is andriod, side channel commands, over privledged, data capture/exfil, teaching users bad habits
+
+
 
 ## Movement After Initial Compromise  Track 3 2:!5
 
