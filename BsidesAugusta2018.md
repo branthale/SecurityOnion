@@ -137,6 +137,29 @@ sixgen  ACO
 
 powerup   DLL hijacking 
 
+winrm
+
+remote registry 
+   REG ADD 
+   
+ DCOM  
+ 
+ Responder    LLMNR NBT-NS   
+ runfinger.py -i 192.168.1.1
+ 
+ multi-relay    htt,webdav
+ 
+ port forwarding     ssh -l     portfwd add -l 3389,  plink port forwarding
+ 
+ kali   proxychaings.conf 
+ proxychains nmap -p 22 192.168.1.1 
+ 
+ Bloodhood 
+ 
+ neo4j console 
+ 
+ 
+
 ## Comparing apples to Apple          Track 1 3:15
 
 ## Objectively Measuring Hunt Value   Track 1 3:45
