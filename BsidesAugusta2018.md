@@ -53,6 +53,14 @@ Fight with visibility
 
 ## Breaking into Banks Like a Boss    Track 3 11:15 
 
+Brice Self    @RenditionSec    @B_Selfless
+
+ Cover for Action and Status 
+ 
+ Support Items - Disguise
+ 
+ Acting skills 
+
 ## Skill Sharpening @ Cyberrange      Track 2 12:30
 
 ## The Sound of Evil                  Track 2 1:30
