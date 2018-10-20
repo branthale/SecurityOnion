@@ -30,9 +30,26 @@ Red team - enumeration is easy and all environments are similar
   
   S3 bucket scanning - dns query on predictable names
   
-  Bitcoin mining in Cloud 
+  Bitcoin mining in Cloud - instance limits!
   
+  Alert on  any/any acl    public bucket      instances invoking user creds instead of instance roles     boxes boote outside of standards templates
   
+  New user agents or IP's have downloaded objects
+  
+  v=YZ058hmLuv0    youtube    Lambda hack 
+  
+  application letters  - Qubes OS 
+  
+Fight with visibility 
+  Mtrends 
+  Azure network watcher flows 
+  Monitor SMB on direct access link
+  
+  Azure -  Tenant activity logs, activity logs OMS, Network watcher flow logs, Securiy Center
+  Azure changes so fast how to keep up 
+  
+  pcaps - port 53 get dns 
+
 
 ## Breaking into Banks Like a Boss    Track 3 11:15 
 
