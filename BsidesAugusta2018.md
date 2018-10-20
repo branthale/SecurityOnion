@@ -63,6 +63,62 @@ Brice Self    @RenditionSec    @B_Selfless
 
 ## Skill Sharpening @ Cyberrange      Track 2 12:30
 
+Don Murdoch
+
+BAS (Gartner) Breach and Adversary Simulations
+
+KSA
+ NICE /NICCS INRE and CDA
+ 
+ Need intial KSA1 assessment, entry points, and progression model
+ Charge code  est time 23-143 hours of prep for every hour of event 
+ Use reusabele resources 
+ Record keeping - did we accomplish the goals    CTFB
+ Root cause analysis - get them to do this 
+ 
+ e-mail delivery, root names servers, forwarders (AWS for e-mail?)
+ 
+ Autuloab, automatedlab, boxstarter
+  LAN/WAN GNS3, Cisco VIRL
+ 
+ DetectionLab
+  Multistage ext
+  AD, DNS, event forwarding, 
+  
+ Toolsets 
+  Apt simulator, Atomic Red Team, BT3, NSA unfetter
+  
+  SILK, BHIS RITA
+  QRADAR
+  Relkci - whitenoiselist 
+  log MD
+  OPENSOC.io
+  Sec Onion 
+  
+ PenTestIT FOSS Compared - chart
+ 
+ APT simulator - batch tool     NextronSystems/APTSimulator
+ 
+ www.bt3.io   low cost 
+ 
+ Atomic Red Team
+  Import-Module 
+  
+ Breaking Point by IXIA
+ 
+ Attack IQ   
+ 
+ Scythe - adsim
+ 
+Range ISMs
+ Agents - do not pivot, do not adjust, go after one thing domain admin, don't read e-mail
+ Tools that use agent aren't that real
+ 4688 Detail tracking / don't teach them somehting that they can't do
+ 
+ 
+ 
+ 
+
 ## The Sound of Evil                  Track 2 1:30
 
 ## Movement After Initial Compromise  Track 3 2:!5
