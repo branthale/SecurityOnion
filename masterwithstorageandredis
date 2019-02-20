@@ -1,0 +1,151 @@
+Convert master w/ local storage to use storage node(s):
+
+In regard to converting an existing master with local storage to allow connection of a storage node, please try the following (snapshot first, if possible):
+
+On the master please do the following (in your desired directory):
+
+sudo touch so-master-add-storage
+sudo chmod +x so-master-add-storage
+
+Copy the following text into the file and run it using "sudo ./so-master-add-storage"
+
+#!/bin/bash
+# Script to convert master with local storage to support addition of one or mode storage nodes.
+#
+# Check for root
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+        echo "This script needs to be run as root.  Please try again using sudo."
+        exit
+fi
+
+SKIP=0
+
+#########################################
+# Options
+#########################################
+usage()
+{
+cat <<EOF
+  Options:
+  -h         This message
+  -y         Skip interactive mode
+
+EOF
+}
+
+while getopts "h:y" OPTION
+do
+        case $OPTION in
+                h)
+                        usage
+                        exit 0
+                        ;;
+                y)
+                        SKIP=1
+                        ;;
+                *)
+                        usage
+                        exit 0
+                        ;;
+        esac
+done
+
+if [ $SKIP -ne 1 ]; then
+
+        # Inform user about changes
+        echo
+        echo "This script will convert a master server with local storage to allow the use of one or more storage nodes" 
+        echo "to extend storage capacity."
+        echo
+        echo "If you would like to proceed, please type "AGREE" and hit ENTER."
+        echo
+
+        # Read user input
+        read INPUT
+        if [ "$INPUT" != "AGREE" ] ; then exit 0; fi
+fi
+
+
+CONF="/etc/nsm/securityonion.conf"
+
+echo
+echo "Backing up securityonion.conf to $CONF.bak..."
+echo
+
+# Back up old conf in case user has custom LOGSTASH_OPTIONS
+cp $CONF $CONF.bak
+
+echo
+echo "Creating pipeline config..."
+echo
+
+# Create pipelines.yml
+cat << EOF >> /etc/logstash/pipelines.yml
+- pipeline.id: redis
+  path.config: "/usr/share/logstash/pipeline/*.conf"
+- pipeline.id: storage
+  path.config: "/usr/share/logstash/storage/*.conf"
+EOF
+
+# Remove default config for path.config
+sed -i 's/^path.config/#&/' /etc/logstash/logstash.yml
+
+echo
+echo "Configuring Logstash options..."
+echo
+
+# Enable Redis input/output
+sed -i 's/LOGSTASH_INPUT_REDIS.*/LOGSTASH_INPUT_REDIS="yes"/' $CONF
+sed -i 's/LOGSTASH_OUTPUT_REDIS.*/LOGSTASH_OUTPUT_REDIS="yes"/' $CONF
+
+# Add options to so-logstash-start to mount pipelines.yml and storage config
+sed -i 's|LOGSTASH_OPTIONS=""|LOGSTASH_OPTIONS="--volume /etc/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro \\\
+--volume /etc/logstash/conf.d/:/usr/share/logstash/storage/:ro"|' $CONF
+
+echo
+echo "Removing syslog config from storage pipeline..."
+echo
+
+# Remove syslog input symlink on master, as it would be duplicated (TCP port 6050) from Redis pipeline 
+for i in /etc/logstash/conf.d/0000_input_syslogng.conf; do
+    if [ -f $i ]; then
+        rm $i
+    fi
+done
+
+echo 
+echo "Restarting Logstash..."
+echo
+
+# Restart Logstash
+so-logstash-restart
+
+echo
+echo "Configuration complete."
+echo
+
+echo "You may want to monitor /var/log/logstash/logstash.log to ensure"
+echo "both the 'redis' and 'storage' pipelines have started."
+echo "(Please note, this may take a few minutes)."
+echo
+echo "Ex:"
+echo
+echo "sudo tail -f /var/log/logstash/logstash.log"
+echo
+
+After running the script, the master should now be configured to output to Redis, as well as to pull from Redis locally.  You should then be able to configure a separate node as a storage node as you normally would.
+
+Please test this using your test master instance and let me know the results.
+
+
+Hot-Warm
+
+Additionally, I've been working with Mike to document and test a complete hot-warm setup.
+
+We are still working to finalize this configuration and will send over the details when we are finished, so that you can test.
+ 
+Replication
+
+If you are only using the two referenced 2TB and 100TB nodes, we'd recommend using a hot-warm setup vs. a replicative setup.
+
+Please let me know if you have any questions, or if you would like me to clarify anything. 
